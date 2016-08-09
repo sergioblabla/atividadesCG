@@ -1,0 +1,213 @@
+<html>
+   <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+      <style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c7{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:150.5pt;border-top-color:#000000;border-bottom-style:solid}.c6{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c16{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial"}.c2{orphans:2;text-indent:36pt;widows:2;text-align:justify;height:11pt}.c17{border-spacing:0;border-collapse:collapse;margin-right:auto}.c15{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c0{orphans:2;widows:2;text-align:center}.c9{orphans:2;widows:2;text-align:justify}.c12{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c1{color:#1155cc;text-decoration:underline}.c13{color:inherit;text-decoration:inherit}.c3{font-size:9pt}.c11{font-size:12pt}.c14{height:0pt}.c5{text-indent:36pt}.c10{font-weight:700}.c18{font-size:14pt}.c8{height:11pt}.c4{font-style:italic}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style>
+   </head>
+   <body class="c12">
+      <p class="c0"><span class="c10 c18">Atividade 1: Algoritmos de Rasteriza&ccedil;&atilde;o</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span class="c11 c10">Introdu&ccedil;&atilde;o</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Esta atividade tem por objetivo a inicia&ccedil;&atilde;o do contato do aluno com a programa&ccedil;&atilde;o de computa&ccedil;&atilde;o gr&aacute;fica. Assim, foi proposta a implementa&ccedil;&atilde;o de algoritmos para a rasteriza&ccedil;&atilde;o de pontos e linhas. Al&eacute;m disso, tri&acirc;ngulos dever&atilde;o ser desenhados a partir destes. O processo de rasteriza&ccedil;&atilde;o de primitivas ser&aacute; diretamente atrav&eacute;s de escrita na mem&oacute;ria de v&iacute;deo. Para permitir essa escrita direta, um framework foi disponibilizado pelo professor.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span class="c10 c11">Rasteriza&ccedil;&atilde;o</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Rasteriza&ccedil;&atilde;o &eacute; o processo de mapeamento de primitivas gr&aacute;ficas por aproxima&ccedil;&atilde;o dos modelos matem&aacute;ticos equivalentes. Isto &eacute;, um elemento gr&aacute;fico, como primitiva, &eacute; descrito ponto a ponto em dom&iacute;nio de plano cartesiano atrav&eacute;s de fun&ccedil;&otilde;es matem&aacute;ticas implementadas por meio de software.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span class="c11 c10">Descri&ccedil;&atilde;o da Implementa&ccedil;&atilde;o</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>De acordo com o requisitado para a atividade, descrito brevemente na se&ccedil;&atilde;o introdu&ccedil;&atilde;o, tr&ecirc;s fun&ccedil;&otilde;es dever&atilde;o ser desenvolvidas: </span><span class="c4">PutPixel</span><span>, </span><span class="c4">DrawLine</span><span>&nbsp;e </span><span class="c4">DrawTriangle</span><span>. Assim, cada uma dessas fun&ccedil;&otilde;es ter&aacute; uma se&ccedil;&atilde;o com discuss&otilde;es, experi&ecirc;ncias, problemas encontrados e resultados.</span></p>
+      <p class="c9 c8"><span></span></p>
+      <p class="c5 c9"><span class="c10">PutPixel</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Essa fun&ccedil;&atilde;o tem o prop&oacute;sito de rasteriza&ccedil;&atilde;o de um ponto atrav&eacute;s da escrita diretamente na mem&oacute;ria de v&iacute;deo. Sendo o ponto composto por posi&ccedil;&atilde;o (x, y) na tela e gradiente de cor (</span><span class="c4">RGBA</span><span>).</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Alguns exemplos foram dados para uso de rasteriza&ccedil;&atilde;o com o framework disponibilizado pelo professor, baseado nisso, foi poss&iacute;vel iniciar o desenvolvimento da presente fun&ccedil;&atilde;o. </span></p>
+      <p class="c9 c5"><span>A informa&ccedil;&atilde;o de cor da imagem renderizada na tela, apesar de possuir duas coordenadas de eixo (x, y), &eacute; representada por uma estrutura de dados do tipo array simples, a qual corresponde &agrave; mem&oacute;ria/buffer de v&iacute;deo do sistema. Para escrever nessa mem&oacute;ria de v&iacute;deo, &eacute; necess&aacute;rio considerar a conven&ccedil;&atilde;o chamada offset para representa&ccedil;&atilde;o dos pontos utilizada nesse array. Al&eacute;m disso, para cada ponto h&aacute; 4 canais de cor como par&acirc;metro a serem ajustados. Assim, para um ponto na tela (pixel), temos:</span></p>
+      <p class="c0 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 252.00px; height: 131.00px;"><img alt="" src="img/portfolio/image07.png" style="width: 252.00px; height: 131.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">Imagem retirada dos slides de aula do professor Christian.</span></p>
+      <p class="c9 c5"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+      <p class="c9 c5"><span>Implementada a fun&ccedil;&atilde;o de conven&ccedil;&atilde;o indicada, como mostrada na figura C&oacute;digo 1, e realizando alguns testes, alguns resultados foram obtidos.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 584.00px; height: 219.00px;"><img alt="" src="img/portfolio/image10.png" style="width: 584.00px; height: 219.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">C&oacute;digo 1.</span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 533.00px; height: 558.00px;"><img alt="" src="img/portfolio/image12.png" style="width: 533.00px; height: 558.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">Teste 1: desenhar um ponto vermelho exatamente no meio da tela (256,256).</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>No </span><span>t</span><span>este 1, o objetivo consistia em desenhar um ponto vermelho na tela com a fun&ccedil;&atilde;o PutPixel implementada. Como mostrado na figura Teste 1, os resultados mostraram sucesso. Por&eacute;m, as dimens&otilde;es da janela de desenho gr&aacute;fico tem valores iguais de largura e altura (ambos 512 pixels), o que sugere uma continua&ccedil;&atilde;o na verifica&ccedil;&atilde;o da implementa&ccedil;&atilde;o realizada.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 583.00px; height: 581.00px;"><img alt="" src="img/portfolio/image06.png" style="width: 583.00px; height: 581.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">Teste 2: desenhar tr&ecirc;s pontos na tela; um vermelho em (256,106), um verde em (356,206) e um azul em (156,306).</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>No </span><span>t</span><span>este 2, o objetivo consistia em desenhar um ponto vermelho, um verde e um azul na tela com a fun&ccedil;&atilde;o PutPixel implementada. Como mostrado na figura Teste 2, os resultados mostraram sucesso. Assim, considera-se que a fun&ccedil;&atilde;o PutPixel foi implementada com sucessso.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 592.00px; height: 328.00px;"><img alt="" src="img/portfolio/image05.png" style="width: 592.00px; height: 328.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">Chamada de fun&ccedil;&atilde;o PutPixel implementada na classe mygl.h e chamada na classe main.cpp..</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span class="c10">DrawLine</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Essa fun&ccedil;&atilde;o deve rasterizar uma linha na tela baseada no modelo matem&aacute;tico descrito no algoritmo de Bresenham. Os pontos devem ser desenhados usando a fun&ccedil;&atilde;o </span><span class="c4">PutPixel</span><span>. A reta ter&aacute;, portanto, os par&acirc;metros de ponto inicial e final, al&eacute;m de suas (duas) cores respectivas. Ao longo do processo de rasteriza&ccedil;&atilde;o do ponto inicial ao final, uma interpola&ccedil;&atilde;o entre essas duas cores deve ser gradativamente implementada mantendo o padr&atilde;o </span><span class="c4">RGBA</span><span>.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>O algoritmo de Bresenham permite a rasteriza&ccedil;&atilde;o de uma linha sem a necessidade de vari&aacute;veis de ponto flutuante (</span><span class="c4">float</span><span>) de c&aacute;lculo para tal, agilizando o tempo de c&aacute;lculo da linha, pois utiliza somente opera&ccedil;&otilde;es simples (adi&ccedil;&atilde;o) com vari&aacute;veis do tipo inteiro (</span><span class="c4">int</span><span>). Em adi&ccedil;&atilde;o, ele tem a capacidade de decidir pela melhor posi&ccedil;&atilde;o para desenhar um ponto, tanto em rela&ccedil;&atilde;o ao eixo x como ao y. </span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c0 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 318.18px; height: 233.50px;"><img alt="" src="img/portfolio/image11.png" style="width: 318.18px; height: 233.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">Imagem retirada dos slides de aula do professor Christian.</span></p>
+      <p class="c0 c5 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>A decis&atilde;o da melhor posi&ccedil;&atilde;o poss&iacute;vel para o ponto atual a ser desenhado em uma linha acontece exatamente atrav&eacute;s do c&aacute;lculo aproximado de erro em rela&ccedil;&atilde;o ao eixo x e y. Se a varia&ccedil;&atilde;o em incrementar o ponto atual rela&ccedil;&atilde;o &agrave; x &eacute; maior que o incremento em rela&ccedil;&atilde;o &agrave; y, considerando um ponto no meio como o ideal (sem descontinuidades vis&iacute;veis), a escolha ser&aacute; para &nbsp;o incremento em y. Caso contr&aacute;rio, o incremento ser&aacute; em x.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c0 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 427.00px; height: 294.00px;"><img alt="" src="img/portfolio/image14.png" style="width: 427.00px; height: 294.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">Imagem retirada dos slides de aula do professor Christian.</span></p>
+      <p class="c0 c5 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>Um modelo de implementa&ccedil;&atilde;o baseado na ideia do algoritmo de Bresenham &eacute; mostrado na figura abaixo.</span></p>
+      <p class="c0 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 359.00px; height: 330.00px;"><img alt="" src="img/portfolio/image15.png" style="width: 359.00px; height: 330.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0 c5"><span class="c3">Imagem retirada dos slides de aula do professor Christian.</span></p>
+      <p class="c0 c5 c8"><span class="c3"></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Inicialmente, a ideia de interpola&ccedil;&atilde;o de cores parece bem complexa, considerando que &eacute; requisitado em padr&atilde;o RGBA para prop&oacute;sito desta atividade e tamb&eacute;m as discuss&otilde;es realizadas em sala sobre o padr&atilde;o HSV. De fato, considerando o padr&atilde;o HSV de cores, uma interpola&ccedil;&atilde;o seria poss&iacute;vel de forma bem simplificada. Entretanto, isso n&atilde;o significa que uma interpola&ccedil;&atilde;o em RGBA precisa ser complexa, no que diz respeito &agrave; plano representativo sem profundidade. Foi necess&aacute;rio apenas dedicar um tempo de reflex&atilde;o para uma solu&ccedil;&atilde;o &oacute;tima poss&iacute;vel para tal. Tanto &eacute; que essa solu&ccedil;&atilde;o presente proposta n&atilde;o se baseia em nenhum algoritmo na internet, pois n&atilde;o envolve terceiros em sua cria&ccedil;&atilde;o.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>A princ&iacute;pio, foi definido que uma cor </span><span class="c4">zero</span><span>&nbsp;do ponto inicial da reta deve variar gradativamente no desenho desta at&eacute; que atinga a cor </span><span class="c4">fim</span><span>&nbsp;do ponto final. Como as cores zero e fim possuem, cada uma, 4 canais de cor para RGBA, temos:</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span></span></p>
+      <a id="t.8a70be6efe1dcd9bf2c455ac2da9009c9505e89a"></a><a id="t.0"></a>
+      <table class="c17">
+         <tbody>
+            <tr class="c14">
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Canais RGBA \ Cores</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span>Cor </span><span class="c4 c16">zero</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span>Cor </span><span class="c16 c4">fim</span></p>
+               </td>
+            </tr>
+            <tr class="c14">
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">R (vermelho)</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Rz</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Rf</span></p>
+               </td>
+            </tr>
+            <tr class="c14">
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">G (verde)</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Gz</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Gf</span></p>
+               </td>
+            </tr>
+            <tr class="c14">
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">B (azul)</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Bz</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Bf</span></p>
+               </td>
+            </tr>
+            <tr class="c14">
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">A (intensidade)</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Az</span></p>
+               </td>
+               <td class="c7" colspan="1" rowspan="1">
+                  <p class="c15"><span class="c6">Af</span></p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p class="c0 c5"><span class="c3">Tabela 1: associa&ccedil;&atilde;o e referencia&ccedil;&atilde;o dos canais RGBA para as duas cores zero e fim, respectivamente do ponto inicial e do final.</span></p>
+      <p class="c0 c5 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>Considerando a Tabela 1, &eacute; necess&aacute;rio, ao longo do desenho de cada ponto desenhado na linha, variar gradativamente os seus valores nos canais de cores, ou seja: de Rz para Rf, de Gz para Gf, de Bz para Bf e de Az para Af. Assim, o fator remanescente na interpola&ccedil;&atilde;o &eacute; a constante a ser modificada a cada ponto e o valor desta. Essa modifica&ccedil;&atilde;o pode ser um incremento ou decremento, dependendo do valor inicial para o canal de cor relativo. Por exemplo, para uma reta, se o Rz &eacute; 255 e o Rf &eacute; 0 (zero), ent&atilde;o a constante de interpola&ccedil;&atilde;o para modificar o canal R deve ser negativa, a fim de decrementar o valor do canal de 255 at&eacute; atingir o objetivo 0 (zero). Por fim, &eacute; necess&aacute;rio definir a intensidade dessa interpola&ccedil;&atilde;o que, por l&oacute;gica direta, deve variar com o n&uacute;mero de pontos. Ent&atilde;o, o valor da constante de interpola&ccedil;&atilde;o depende do n&uacute;mero de pontos a serem desenhados e precisa ser calculada desta forma. Consequentemente, temos:</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c0"><span class="c10">Constante de Interpola&ccedil;&atilde;o para um Canal C de cor</span><span>&nbsp;= </span></p>
+      <p class="c0 c5"><span>(Cfinal - Cinicial) / (n&ordm; de pontos na reta)</span></p>
+      <p class="c9 c8"><span></span></p>
+      <p class="c9"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uma vers&atilde;o simplificada da fun&ccedil;&atilde;o DrawLine, baseada na ideia do algoritmo de Bresenham, e com interpola&ccedil;&atilde;o de cores, seguindo a l&oacute;gica definida anteriormente na presente se&ccedil;&atilde;o, foi implementada. Assim, alguns testes foram realizados para verifica&ccedil;&atilde;o da corretude dessa fun&ccedil;&atilde;o, gerando alguns resultados.</span></p>
+      <p class="c9 c8"><span></span></p>
+      <p class="c0"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 530.00px; height: 556.00px;"><img alt="" src="img/portfolio/image13.png" style="width: 530.00px; height: 556.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">Teste 3: rasteriza&ccedil;&atilde;o de uma reta que corta a tela na diagonal, ponto vermelho inicial em (0,0) e ponto verde final em (512,512).</span></p>
+      <p class="c9 c8"><span></span></p>
+      <p class="c9 c5"><span>No teste 3, o objetivo consistia em desenhar uma reta na tela a a partir de um ponto inicial vermelho em (0,0) e um ponto final verde em (512,512) com a fun&ccedil;&atilde;o DrawLine implementada. Como mostrado na figura Teste 3, os resultados mostraram sucesso. Por&eacute;m, as dimens&otilde;es da janela de desenho gr&aacute;fico tem valores iguais de largura e altura (ambos 512 pixels), o que sugere uma continua&ccedil;&atilde;o na verifica&ccedil;&atilde;o da implementa&ccedil;&atilde;o realizada.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 543.00px; height: 567.00px;"><img alt="" src="img/portfolio/image02.png" style="width: 543.00px; height: 567.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">Teste 4: rasteriza&ccedil;&atilde;o de uma reta a partir de um ponto vermelho inicial em (480,200) e ponto verde final em (30,500).</span></p>
+      <p class="c0 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>No teste 4, o objetivo consistia em desenhar uma reta na tela a a partir de um ponto inicial vermelho em (480,200) e um ponto final verde em (30,500) com a fun&ccedil;&atilde;o DrawLine implementada. Como mostrado na figura Teste 4, o ponto inicial e o final est&atilde;o invertidos, caracterizando um problema de transla&ccedil;&atilde;o de quadrantes no c&aacute;lculo implementado baseado em Bresenham. Em outras palavras, a implementa&ccedil;&atilde;o da fun&ccedil;&atilde;o n&atilde;o est&aacute; correta e os testes comprovam isso.</span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 551.00px; height: 570.00px;"><img alt="" src="img/portfolio/image09.png" style="width: 551.00px; height: 570.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">Teste 5: rasteriza&ccedil;&atilde;o de uma reta a partir de um ponto azul inicial em (306, 206) e ponto vermelho final em (256, 106).</span></p>
+      <p class="c0 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>No teste 5, o objetivo consistia em desenhar uma reta na tela a a partir de um ponto inicial azul em (306, 206) e um ponto final vermelho em (256, 106) com a fun&ccedil;&atilde;o DrawLine implementada. Como mostrado na figura Teste 5, a reta desenhada n&atilde;o caracteriza o esperado, sugerindo novamente um problema de transla&ccedil;&atilde;o de quadrantes no c&aacute;lculo implementado baseado em Bresenham. Em outras palavras, a implementa&ccedil;&atilde;o da fun&ccedil;&atilde;o n&atilde;o est&aacute; correta e os testes comprovam isso.</span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 564.00px; height: 573.00px;"><img alt="" src="img/portfolio/image04.png" style="width: 564.00px; height: 573.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">Teste 6: rasteriza&ccedil;&atilde;o de duas retas, a maior com ponto inicial vermelho (480,200) e final verde (30,500), a menor com ponto inicial azul (306, 206) e final vermelho (256, 106).</span></p>
+      <p class="c0 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>No &uacute;ltimo teste assistido, o teste 6, o objetivo consistia em desenhar duas retas: uma maior com ponto inicial vermelho (480,200) e final verde (30,500) e uma menor com ponto inicial azul (306, 206) e final vermelho (256, 106). Como mostrado na figura Teste 6, as retas desenhadas caracterizam perfeitamente o esperado. Assim, um estado de corretude foi alcan&ccedil;ado com sucesso na implementa&ccedil;&atilde;o da fun&ccedil;&atilde;o DrawLine.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 574.00px; height: 332.00px;"><img alt="" src="img/portfolio/image03.png" style="width: 574.00px; height: 332.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">Chamada da fun&ccedil;&atilde;o implementada DrawLine no Teste 6, atrav&eacute;s da classe main.cpp.</span></p>
+      <p class="c0 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>Contudo, nem todos os testes na implementa&ccedil;&atilde;o da fun&ccedil;&atilde;o DrawLine foram assistidos, a motivo de que seria informa&ccedil;&atilde;o demais. Os testes mostrados na presente se&ccedil;&atilde;o caracterizaram os principais problemas enfrentados, que foram na transla&ccedil;&atilde;o entre os quadrantes de orienta&ccedil;&atilde;o para c&aacute;lculo de desenho da reta. Essa transla&ccedil;&atilde;o, foi, sem d&uacute;vidas, a parte mais elaborada e complexa da fun&ccedil;&atilde;o ao longo de seu desenvolvimento.</span></p>
+      <p class="c0 c8"><span class="c3"></span></p>
+      <p class="c9 c8"><span></span></p>
+      <p class="c9 c5"><span class="c10">DrawTriangle</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Essa fun&ccedil;&atilde;o desenhar um tri&acirc;ngulo atrav&eacute;s de suas tr&ecirc;s arestas, cada aresta como resultado do uso da fun&ccedil;&atilde;o </span><span class="c4">DrawLine</span><span>. Assim, os par&acirc;metros s&atilde;o as posi&ccedil;&otilde;es (x, y) dos tr&ecirc;s pontos de encontro entre as arestas e as suas (tr&ecirc;s) cores respectivas. As cores de cada ponto rasterizado na linha dever&aacute;, portanto, estar aninhado &agrave; uma interpola&ccedil;&atilde;o entre essas duas cores gradativamente implementada mantendo o padr&atilde;o </span><span class="c4">RGBA</span><span>. </span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Um tri&acirc;ngulo &eacute; composto por tr&ecirc;s vertices e tr&ecirc;s arestas. Sendo uma aresta uma linha, &eacute; poss&iacute;vel definir uma fun&ccedil;&atilde;o para rasteriza&ccedil;&atilde;o de tri&acirc;ngulo com interpola&ccedil;&atilde;o (sem preenchimento completo do tri&acirc;ngulo) atrav&eacute;s do uso da fun&ccedil;&atilde;o DrawLine implementada com corretude apropriada. Assim, a seguinte fun&ccedil;&atilde;o foi desenvolvida:</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 470.00px; height: 126.00px;"><img alt="" src="img/portfolio/image08.png" style="width: 470.00px; height: 126.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">C&oacute;digo 2: fun&ccedil;&atilde;o implementada para DrawTriangle.</span></p>
+      <p class="c9"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assim, ap&oacute;s a implementa&ccedil;&atilde;o da DrawTriangle, foi realizado um teste e o resultado foi obtido.</span></p>
+      <p class="c9 c8"><span></span></p>
+      <p class="c0"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 665.47px; height: 643.50px;"><img alt="" src="img/portfolio/image00.png" style="width: 665.47px; height: 643.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">Teste 7: rasteriza&ccedil;&atilde;o de um tri&acirc;ngulo com pontos um vermelho em (106, 406), dois verde em (256, 106) e tr&ecirc;s azul em (406, 406).</span></p>
+      <p class="c0 c8"><span class="c3"></span></p>
+      <p class="c9 c5"><span>No &uacute;nico teste assistido para a fun&ccedil;&atilde;o DrawTriangle, o teste 7, o objetivo consistia em desenhar um tri&acirc;ngulo com base nos pontos: um vermelho em (106, 406), dois verde em (256, 106) e tr&ecirc;s azul em (406, 406). Como mostrado na figura Teste 7, o tri&acirc;ngulo e suas retas desenhadas caracterizam perfeitamente o esperado. Assim, a fun&ccedil;&atilde;o DrawTriangle foi implementada com sucesso.</span></p>
+      <p class="c0 c8"><span class="c3"></span></p>
+      <p class="c0 c5"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 575.00px; height: 368.00px;"><img alt="" src="img/portfolio/image01.png" style="width: 575.00px; height: 368.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+      <p class="c0"><span class="c3">Chamada da fun&ccedil;&atilde;o implementada DrawTriangle no Teste 7, atrav&eacute;s da classe main.cpp.</span></p>
+      <p class="c0"><span class="c3">.</span></p>
+      <p class="c9 c5"><span class="c10">C&oacute;digo e Arquivos</span></p>
+      <p class="c2"><span class="c10"></span></p>
+      <p class="c9 c5"><span>O presente material discutido e desenvolvido ao longo dessa atividade est&aacute; devidamente comentado e organizado, sendo dispon&iacute;vel para windows e linux em:</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>- Windows: </span></p>
+      <p class="c9 c5"><span class="c1"><a class="c13" href="https://www.google.com/url?q=https://www.dropbox.com/s/g03uc7ebxlb4djm/ATV1_Sergio_Windows.zip?dl%3D0&amp;sa=D&amp;ust=1470704789796000&amp;usg=AFQjCNGWPokCBN96RYAB4CbzzdQfXCCnqQ">https://www.dropbox.com/s/g03uc7ebxlb4djm/ATV1_Sergio_Windows.zip?dl=0</a></span></p>
+      <p class="c9 c5"><span class="c1"><a class="c13" href="https://www.google.com/url?q=https://github.com/sergioblabla/atividadesCG/blob/master/ATV1_Sergio_Windows.zip&amp;sa=D&amp;ust=1470704789797000&amp;usg=AFQjCNFstDhsurTmyj1Omx3qc0vLGmEjKw">https://github.com/sergioblabla/atividadesCG/blob/master/ATV1_Sergio_Windows.zip</a></span></p>
+      <p class="c9 c8"><span></span></p>
+      <p class="c9 c5"><span>- Linux: </span></p>
+      <p class="c9 c5"><span class="c1"><a class="c13" href="https://www.google.com/url?q=https://www.dropbox.com/s/xsm5ga4oswy06e8/ATV1_S%25C3%25A9rgio_Linux.zip?dl%3D0&amp;sa=D&amp;ust=1470704789798000&amp;usg=AFQjCNHhBrYcZ1KBVnaIEXk0xm7RP16suQ">https://www.dropbox.com/s/xsm5ga4oswy06e8/ATV1_S%C3%A9rgio_Linux.zip?dl=0</a></span></p>
+      <p class="c9 c5"><span class="c1"><a class="c13" href="https://www.google.com/url?q=https://github.com/sergioblabla/atividadesCG/blob/master/ATV1_Sergio_Linux.zip&amp;sa=D&amp;ust=1470704789799000&amp;usg=AFQjCNGn9NlnCi49k3g054r-qEQYygNG3w">https://github.com/sergioblabla/atividadesCG/blob/master/ATV1_Sergio_Linux.zip</a></span></p>
+      <p class="c2"><span></span></p>
+      <p class="c2"><span class="c10"></span></p>
+      <p class="c9 c5"><span class="c10">Refer&ecirc;ncias Bibliogr&aacute;ficas</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Azambuja Pago, Christian: Slides de Aula - Introdu&ccedil;&atilde;o &agrave; Computa&ccedil;&atilde;o Gr&aacute;fica. Dispon&iacute;vel em: &lt;</span><span>https://sigaa.ufpb.br/sigaa/ava/Foruns/view.jsf</span><span>&gt; Acessado em agosto de 2016.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Azambuja Pago, Christian: T1_definition. Dispon&iacute;vel em: &lt;</span><span>https://sigaa.ufpb.br/sigaa/ava/Foruns/view.jsf</span><span>&gt; Acessado em agosto de 2016.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Colin Flanagan: The Bresenham Line-Drawing Algorithm. Dispon&iacute;vel em: &lt;</span><span>https://www.cs.helsinki.fi/group/goa/mallinnus/lines/bresenh.html</span><span>&gt; Acessado em agosto de 2016.</span></p>
+      <p class="c2"><span></span></p>
+      <p class="c9 c5"><span>Wikipedia: Bresenham&rsquo;s line algorithm. Dispon&iacute;vel em: &lt;</span><span>https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm</span><span>&gt; Acessado em agosto de 2016.</span></p>
+   </body>
+</html>
